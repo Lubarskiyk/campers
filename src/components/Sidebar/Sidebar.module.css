@@ -1,0 +1,16 @@
+.sidebar {
+  height: calc(100vh - 73px);
+  width: 39%;
+  color: var(--main);
+   padding-left: 4px;
+}
+.wraper {
+  display: flex;
+  padding: 48px 64px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

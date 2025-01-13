@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "AC",
+    "icon": "ICO"
+  },
+  {
+    "id": 2,
+    "title": "Automatic",
+    "icon": "ICO"
+  },
+  {
+    "id": 3,
+    "title": "Kitchen",
+    "icon": "ICO"
+  },
+  {
+    "id": 4,
+    "title": "TV",
+    "icon": "ICO"
+  },
+  {
+    "id": 5,
+    "title": "Bathroom",
+    "icon": "Bathroom"
+  }
+]
