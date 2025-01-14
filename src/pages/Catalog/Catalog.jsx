@@ -14,9 +14,6 @@ export default function Catalog() {
             );
         })}
       </ul>
-
-
-
     </section>
   );
 }

@@ -1,10 +1,10 @@
 .home {
     background-image:  url("/public/Picture.png");
-    height: calc(100vh - 73px);
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 64px;
+    padding: 74px 64px;
 
 }
 .wrap{
