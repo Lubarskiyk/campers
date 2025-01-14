@@ -1,11 +1,10 @@
 .header {
-  /*display: flex;*/
   border-bottom: 1px solid var(--badges);
   padding: 24px 64px;
   background: var(--inputs);
-  /*align-items: center;*/
-  /*justify-content: space-between;*/
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
 .logo{
   position: absolute;

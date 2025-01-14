@@ -1,7 +1,11 @@
 .catalog {
     height: calc(100vh - 73px);
-    width: 100%;
+    width: calc(100% - 424px);
     background: var(--white);
-
-
+    margin-left: auto;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }

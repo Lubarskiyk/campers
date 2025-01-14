@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "Van",
-    "icon": "ICO"
+    "icon": "#icon-bi_grid-1x2"
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Fully Integrated",
-    "icon": "ICO"
+    "icon": "#icon-bi_grid"
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Alcove",
-    "icon": "ICO"
+    "icon": "#icon-bi_grid-3x3-gap"
   }
 
 ]

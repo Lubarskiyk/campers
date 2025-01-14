@@ -1,0 +1,68 @@
+[
+  {
+    "id": "transmission",
+    "title": "",
+    "icon": "#icon-diagram"
+  },
+  {
+    "id": "engine",
+    "title": "",
+    "icon": "#icon-fuel-pump"
+  },
+  {
+    "id": "AC",
+    "title": "AC",
+    "icon": "#icon-wind"
+  },
+  {
+    "id": "kitchen",
+    "title": "Kitchen",
+    "icon": "#icon-cup-hot"
+  },
+  {
+    "id": "bathroom",
+    "title": "Bathroom",
+    "icon": "#icon-ph_shower"
+  },
+  {
+    "id": "TV",
+    "title": "TV",
+    "icon": "#icon-tv"
+  },
+  {
+    "id": "radio",
+    "title": "Radio",
+    "icon": "#icon-ui-radios"
+  },
+  {
+    "id": "refrigerator",
+    "title": "Refrigerator",
+    "icon": "#icon-solar_fridge-outline"
+  },
+  {
+    "id": "microwave",
+    "title": "Microwave",
+    "icon": "#icon-lucide_microwave"
+  },
+  {
+    "id": "gas",
+    "title": "Gas",
+    "icon": "#icon-hugeicons_gas-stove"
+  },
+  {
+    "id": "water",
+    "title": "Water",
+    "icon": "#icon-ion_water-outline"
+  }
+
+]
+
+
+
+
+
+
+
+
+
+
