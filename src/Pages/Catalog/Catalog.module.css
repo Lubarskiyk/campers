@@ -1,5 +1,5 @@
 .catalog {
-    height: calc(100vh - 73px);
+    height: calc(100%);
     width: calc(100% - 424px);
     background: var(--white);
     margin-left: auto;
@@ -8,4 +8,13 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.loader{
+
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

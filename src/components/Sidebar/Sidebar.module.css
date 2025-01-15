@@ -1,5 +1,5 @@
 .wraper {
-  height: 100vh;
+  height: calc(100vh - 73px);
   padding: 48px 64px;
   position: relative;
   top: 73px;
