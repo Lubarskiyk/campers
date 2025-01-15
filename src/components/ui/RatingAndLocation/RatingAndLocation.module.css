@@ -1,0 +1,30 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.iconstar {
+    height: 16px;
+    width: 16px;
+    fill: var(--rating);
+}
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.iconloc {
+    height: 16px;
+    width: 16px;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}

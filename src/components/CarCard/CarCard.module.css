@@ -37,48 +37,18 @@
   font-size: 24px;
   line-height: 133%;
 }
-.nametitle{
-    max-width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.nametitle {
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.rating {
+.prrise_fav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.iconstar {
-  height: 16px;
-  width: 16px;
-  fill: var(--rating);
-}
-.location {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 4px;
-}
-
-.iconloc {
-  height: 16px;
-  width: 16px;
-}
-.prrise_fav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.review {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 4px;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .descripttext {
@@ -94,5 +64,5 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }

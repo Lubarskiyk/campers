@@ -2,11 +2,13 @@ import equipments from '../../Data/Equipment.json';
 import Favorites from '../Favorite/Favorites.jsx';
 import BadgeEquipment from '../ui/BadgeEquipment/BadgesEquipment.jsx';
 import NavLinkButton from '../ui/NavLinkButton/NavLinkButton.jsx';
+import RatingAndLocation from '../ui/RatingAndLocation/RatingAndLocation.jsx';
 import css from './CarCard.module.css';
-import sprite from '/icons.svg';
+
 
 export default function CarCard({ data }) {
-  const { description, name, rating, location, price, gallery, reviews,id } = data;
+  const { description, name, rating, location, price, gallery, reviews, id } =
+    data;
   return (
     <div className={css.card}>
       <div className={css.imgblock}>
@@ -24,24 +26,14 @@ export default function CarCard({ data }) {
                 .format(price)
                 .replace(/,/g, ' ')}
             </p>
-            <Favorites id={id}/>
+            <Favorites id={id} />
           </div>
         </div>
-        <div className={css.rating}>
-          <div className={css.review}>
-            <svg className={css.iconstar}>
-              <use href={sprite + '#icon-star'} />
-            </svg>
-            <p>{rating}</p>
-            <p>{`(${reviews.length} Reviews)`}</p>
-          </div>
-          <div className={css.review}>
-            <svg className={css.iconloc}>
-              <use href={sprite + '#icon-map'} />
-            </svg>
-            <p>{location}</p>
-          </div>
-        </div>
+        <RatingAndLocation
+          rating={rating}
+          reviews={reviews}
+          location={location}
+        />
         <p className={css.descripttext}>{description}</p>
         <ul className={css.list}>
           {equipments.map(item => {
@@ -55,8 +47,7 @@ export default function CarCard({ data }) {
               );
           })}
         </ul>
-        <NavLinkButton/>
-
+        <NavLinkButton />
       </div>
     </div>
   );
