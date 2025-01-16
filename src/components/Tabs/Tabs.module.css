@@ -1,0 +1,88 @@
+.reacttabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tablist {
+  margin-bottom: 24px;
+}
+.divider {
+  display: block;
+  border-bottom: 2px solid var(--gray-light);
+  margin-bottom: 44px;
+}
+.tabstab {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+}
+.tabfirst {
+  margin-right: 40px;
+}
+
+.tabselected {
+  position: relative;
+  border: none;
+}
+.tabselected:before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 0;
+  border-bottom: 5px solid var(--button);
+  width: 100%;
+}
+
+.react-tabs__tab:focus {
+  outline: none;
+}
+
+.tabpanel {
+  display: none;
+}
+
+.tabpanelselected {
+  display: block;
+  border-radius: 10px;
+  padding: 44px 52px;
+  width: 50%;
+  max-height: 588px;
+  background: var(--inputs);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 200px;
+    margin-bottom: 4px;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--main);
+    margin-bottom: 24px;
+}
+.dividerdetal{
+    margin-bottom: 24px;
+}
+.listdetal{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main);
+}

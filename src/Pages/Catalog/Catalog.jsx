@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector, useStore } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { CircleLoader } from 'react-spinners';
 import CarCard from '../../components/CarCard/CarCard.jsx';
 import { fetchCampers } from '../../Redux/catalog/operations.js';

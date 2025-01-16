@@ -2,6 +2,7 @@ import equipments from '../../Data/Equipment.json';
 import Favorites from '../Favorite/Favorites.jsx';
 import BadgeEquipment from '../ui/BadgeEquipment/BadgesEquipment.jsx';
 import NavLinkButton from '../ui/NavLinkButton/NavLinkButton.jsx';
+import Price from '../ui/Price/Price.jsx';
 import RatingAndLocation from '../ui/RatingAndLocation/RatingAndLocation.jsx';
 import css from './CarCard.module.css';
 
@@ -17,22 +18,16 @@ export default function CarCard({ data }) {
       <div className={css.description}>
         <div className={css.name}>
           <h2 className={css.nametitle}>{name}</h2>
-          <div className={css.prrise_fav}>
-            <p>
-              {new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'EUR',
-              })
-                .format(price)
-                .replace(/,/g, ' ')}
-            </p>
-            <Favorites id={id} />
+          <div className={css.price_fav}>
+            <Price price={price} />
+                  <Favorites id={id} />
           </div>
         </div>
         <RatingAndLocation
           rating={rating}
           reviews={reviews}
           location={location}
+          className={css.rat}
         />
         <p className={css.descripttext}>{description}</p>
         <ul className={css.list}>

@@ -44,11 +44,15 @@
   text-overflow: ellipsis;
 }
 
-.prrise_fav {
+.price_fav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.rat{
+  margin-bottom: 24px;
 }
 
 .descripttext {

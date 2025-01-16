@@ -1,0 +1,16 @@
+.imagegallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.img{
+    border-radius: 10px;
+    max-width: 292px;
+    height: 312px;
+    object-fit: cover;
+    object-position :center;
+}

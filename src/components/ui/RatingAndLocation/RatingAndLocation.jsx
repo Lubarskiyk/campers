@@ -1,9 +1,10 @@
 import sprite from '/icons.svg';
+import clsx from 'clsx';
 import css from './RatingAndLocation.module.css';
 
-export default function RatingAndLocation({rating,reviews,location}) {
+export default function RatingAndLocation({rating,reviews,location,className}) {
   return (
-    <div className={css.rating}>
+    <div className={clsx(css.rating, className)}>
       <div className={css.review}>
         <svg className={css.iconstar}>
           <use href={sprite + '#icon-star'} />

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "form",
+    "title": "Form"
+  },
+  {
+    "id": "length",
+    "title": "Length"
+  },
+  {
+    "id": "width",
+    "title": "Width"
+  },
+  {
+    "id": "height",
+    "title": "Height"
+  },
+  {
+    "id": "tank",
+    "title": "Tank"
+  },
+  {
+    "id": "consumption",
+    "title": "Consumption"
+  }
+]

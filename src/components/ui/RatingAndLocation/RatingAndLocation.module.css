@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 16px;
-    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main);
 }
 .iconstar {
     height: 16px;
