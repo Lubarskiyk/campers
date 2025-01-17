@@ -47,42 +47,53 @@
 .tabpanelselected {
   display: block;
   border-radius: 10px;
-  padding: 44px 52px;
+  padding: 40px 52px;
   width: 50%;
-  max-height: 588px;
+  height: 588px;
+  overflow-y: auto;
   background: var(--inputs);
 }
 
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    min-height: 200px;
-    margin-bottom: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 200px;
+  margin-bottom: 4px;
 }
 
-.title{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 120%;
-    color: var(--main);
-    margin-bottom: 24px;
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  margin-bottom: 24px;
 }
-.dividerdetal{
-    margin-bottom: 24px;
+.dividerdetal {
+  margin-bottom: 24px;
 }
-.listdetal{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.listdetal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.item{
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
+}
+
+.listreview {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.tabcontainer{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--main);
+
 }

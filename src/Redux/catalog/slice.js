@@ -13,7 +13,7 @@ function handleRejected(state, action) {
 const slice = createSlice({
   name: 'campers',
   initialState: {
-    items: {},
+    items: null,
     isLoading: true,
     error: null,
   },
@@ -27,6 +27,13 @@ const slice = createSlice({
         state.items = action.payload;
       })
       .addCase(fetchCampers.rejected, handleRejected);
+  },
+  reducers: {
+    clearData: state => {
+      state.isLoading = false;
+      state.error = null;
+      state.items = null;
+    },
   },
 });
 export default slice.reducer;

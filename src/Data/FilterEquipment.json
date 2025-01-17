@@ -2,27 +2,32 @@
   {
     "id": "1",
     "title": "AC",
-    "icon": "#icon-wind"
+    "icon": "#icon-wind",
+    "databaseid": "AC"
   },
   {
     "id": "2",
     "title": "Automatic",
-    "icon": "#icon-diagram"
+    "icon": "#icon-diagram",
+    "databaseid": "transmission",
+    "data": "automatic"
   },
   {
     "id": "3",
     "title": "Kitchen",
-    "icon": "#icon-cup-hot"
+    "icon": "#icon-cup-hot",
+    "databaseid": "kitchen"
   },
   {
     "id": "4",
     "title": "TV",
-    "icon": "#icon-tv"
+    "icon": "#icon-tv",
+    "databaseid": "TV"
   },
   {
     "id": "5",
     "title": "Bathroom",
-    "icon": "#icon-ph_shower"
+    "icon": "#icon-ph_shower",
+    "databaseid": "bathroom"
   }
-
 ]

@@ -2,17 +2,19 @@
   {
     "id": "1",
     "title": "Van",
-    "icon": "#icon-bi_grid-1x2"
+    "icon": "#icon-bi_grid-1x2",
+    "form": "panelTruck"
   },
   {
     "id": "2",
     "title": "Fully Integrated",
-    "icon": "#icon-bi_grid"
+    "icon": "#icon-bi_grid",
+    "form": "fullyIntegrated"
   },
   {
     "id": "3",
     "title": "Alcove",
-    "icon": "#icon-bi_grid-3x3-gap"
+    "icon": "#icon-bi_grid-3x3-gap",
+    "form": "alcove"
   }
-
 ]

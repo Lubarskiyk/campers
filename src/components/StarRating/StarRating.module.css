@@ -1,0 +1,15 @@
+.starrating{
+    display: flex;
+    align-items: center;
+    gap: 4px
+
+}
+.icon {
+  height: 16px;
+  width: 16px;
+  fill: var(--badges);
+}
+
+.star {
+  fill: var(--rating);
+}
