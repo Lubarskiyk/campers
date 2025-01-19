@@ -38,12 +38,11 @@ export default function Catalog() {
   }, [dispatch, filter, page]);
 
   function updateSearchParams(value, page) {
-    console.log(value);
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);
     updatedParams.set('limit', perPage);
     const carTypeFilter = filterCarType.filter(
-      cartype => cartype.id === "1"
+      cartype => cartype.id === value.carTypes
     );
     if (carTypeFilter.length === 1) {
       updatedParams.set('form', carTypeFilter[0].form);
