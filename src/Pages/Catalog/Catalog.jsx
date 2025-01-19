@@ -37,11 +37,8 @@ export default function Catalog() {
     dispatch(fetchCampers(updateSearchParams(filter, page)));
   }, [dispatch, filter, page]);
 
-  function updateSearchParams(value = {}, page) {
-    if (!value) {
-      value.carTypes = '1';
-      value.equipments = [];
-    }
+  
+  function updateSearchParams(value, page) {
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);
     updatedParams.set('limit', perPage);
