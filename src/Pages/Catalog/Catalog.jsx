@@ -37,10 +37,10 @@ export default function Catalog() {
     dispatch(fetchCampers(updateSearchParams(filter, page)));
   }, [dispatch, filter, page]);
 
-  function updateSearchParams(value, page) {
+  function updateSearchParams(value = {}, page) {
     if (!value) {
-      value.carTypes='1';
-      value.equipment=[]
+      value.carTypes = '1';
+      value.equipment = [];
     }
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);
@@ -91,7 +91,10 @@ export default function Catalog() {
         </ul>
       )}
       <div className={css.pagination}>
-        <button className={clsx(css.button, page === 1 && css.notactive)} onClick={handlerClickPrev}  >
+        <button
+          className={clsx(css.button, page === 1 && css.notactive)}
+          onClick={handlerClickPrev}
+        >
           Prevision Page
         </button>
         <button
