@@ -17,7 +17,7 @@ export default function Catalog() {
   const data = useSelector(getCampers);
   const filter = useSelector(selectFilterCampers);
   const perPage = 4;
-
+  console.log(filter);
   const totalPage = data ? Math.ceil(data.total / perPage) : 1;
 
   function handlerClickNext() {
@@ -37,7 +37,7 @@ export default function Catalog() {
     dispatch(fetchCampers(updateSearchParams(filter, page)));
   }, [dispatch, filter, page]);
 
-  
+
   function updateSearchParams(value, page) {
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);

@@ -12,7 +12,7 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     filterCampers: (state, action) => {
-      state.filtercampers = action.payload
+      state.filterCampers = action.payload
 
     },
   },
