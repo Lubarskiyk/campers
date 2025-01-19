@@ -40,7 +40,7 @@ export default function Catalog() {
   function updateSearchParams(value = {}, page) {
     if (!value) {
       value.carTypes = '1';
-      value.equipment = [];
+      value.equipments = [];
     }
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);
