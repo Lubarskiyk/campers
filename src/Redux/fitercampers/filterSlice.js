@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   filterCampers: {
-    carTypes:"",
+    carTypes:"1",
     equipments:[]
   },
 };
