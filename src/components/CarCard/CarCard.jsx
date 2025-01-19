@@ -1,4 +1,5 @@
 import equipments from '../../Data/Equipment.json';
+import CamperDetail from '../../Pages/CamperDetail/CamperDetail.jsx';
 import Favorites from '../Favorite/Favorites.jsx';
 import BadgeEquipment from '../ui/BadgeEquipment/BadgesEquipment.jsx';
 import NavLinkButton from '../ui/NavLinkButton/NavLinkButton.jsx';
@@ -42,7 +43,7 @@ export default function CarCard({ data }) {
               );
           })}
         </ul>
-        <NavLinkButton />
+        <NavLinkButton path={`/camperdetail/${id}`} component={CamperDetail} />
       </div>
     </div>
   );

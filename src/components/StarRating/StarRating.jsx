@@ -8,7 +8,7 @@ export default function StarRating({ count }) {
   for (let i = 0; i < 5; i++) {
     i < count ? starscolor.push(true) : starscolor.push(false);
   }
-  console.log(starscolor);
+
   return (
     <div className={css.starrating}>
       {starscolor.map((star,index) => {

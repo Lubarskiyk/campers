@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCampers } from './operations.js';
+import { fetchCampersById } from './operations.js';
 
 function handlePending(state) {
   state.isLoading = true;
@@ -11,7 +11,7 @@ function handleRejected(state, action) {
 }
 
 const slice = createSlice({
-  name: 'campers',
+  name: 'campersid',
   initialState: {
     items: null,
     isLoading: true,
@@ -20,21 +20,13 @@ const slice = createSlice({
 
   extraReducers: builder => {
     builder
-      .addCase(fetchCampers.pending, handlePending)
-      .addCase(fetchCampers.fulfilled, (state, action) => {
+      .addCase(fetchCampersById.pending, handlePending)
+      .addCase(fetchCampersById.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchCampers.rejected, handleRejected);
-  },
-
-  reducers: {
-    clearData: state => {
-      state.isLoading = false;
-      state.error = null;
-      state.items = null;
-    },
+      .addCase(fetchCampersById.rejected, handleRejected);
   },
 });
 export default slice.reducer;

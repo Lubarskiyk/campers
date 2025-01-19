@@ -14,7 +14,7 @@ function App() {
         <Route element={<Sidebar />}>
           <Route path="/catalog" element={<Catalog />} />
         </Route>
-        <Route path="/catalog/:id" element={<CamperDetail />} />
+        <Route path="/camperdetail/:id" element={<CamperDetail />} />
       </Route>
     </Routes>
   );

@@ -3,42 +3,27 @@ import { useState } from 'react';
 import FsLightbox from 'fslightbox-react';
 import css from './ImageGallery.module.css';
 
-function ImageGallery({ className }) {
+function ImageGallery({ className, data }) {
   const [toggler, setToggler] = useState(true);
-  const data = [
-    {
-      id: 0,
-      image: 'https://ftp.goit.study/img/campers-test-task/1-1.webp',
-    },
-    {
-      id: 1,
-      image: 'https://ftp.goit.study/img/campers-test-task/1-2.webp',
-    },
-    {
-      id: 2,
-      image: 'https://ftp.goit.study/img/campers-test-task/1-3.webp',
-    },
-  ];
-  const imageUrl = [
-    'https://ftp.goit.study/img/campers-test-task/1-1.webp',
-    'https://ftp.goit.study/img/campers-test-task/1-2.webp',
-    'https://ftp.goit.study/img/campers-test-task/1-3.webp',
-  ];
+  const galleryData = [];
+  for (let i = 0; i < data.length; i++) {
+    galleryData.push(data[i].original);
+  }
 
   return (
     <div className={clsx(css.imagegallery, className)}>
-      {data.map(item => (
-        <div key={item.id}>
+      {data.map((item, index) => (
+        <div key={index}>
           <img
             className={css.img}
-            src={item.image}
+            src={item.thumb}
             onClick={() => {
               setToggler(!toggler);
             }}
           />
         </div>
       ))}
-      <FsLightbox toggler={toggler} sources={imageUrl} type="image" />
+      <FsLightbox toggler={toggler} sources={galleryData} type="image" />
     </div>
   );
 }

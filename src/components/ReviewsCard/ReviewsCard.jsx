@@ -3,7 +3,7 @@ import css from './ReviewsCard.module.css';
 
 export default function ReviewsCard({ data }) {
   const { reviewer_name, reviewer_rating, comment } = data;
-  console.log(data);
+
   return (
     <div className={css.container}>
       <div className={css.nameblock}>

@@ -1,11 +1,15 @@
 import clsx from 'clsx';
+import { Field, Form, Formik } from 'formik';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import equipments from '../../Data/Equipment.json';
 import vehicleDetails from '../../Data/VehicleDetails.json';
+import BookingForm from '../BookingForm/BookingForm.jsx';
 import ReviewsCard from '../ReviewsCard/ReviewsCard.jsx';
 import BadgeEquipment from '../ui/BadgeEquipment/BadgesEquipment.jsx';
 import css from './Tabs.module.css';
+
 export default function CampersTabs({ data }) {
+
   const { reviews } = data;
   return (
     <Tabs className={css.reacttabs}>
@@ -22,7 +26,7 @@ export default function CampersTabs({ data }) {
       </TabList>
       <span className={css.divider}></span>
       <div className={css.tabcontainer}>
-        <div>
+        <div className={css.tab}>
           <TabPanel
             className={css.tabpanel}
             selectedClassName={css.tabpanelselected}
@@ -70,8 +74,8 @@ export default function CampersTabs({ data }) {
             </ul>
           </TabPanel>
         </div>
-        <div>
-          <p>Ghbdtn</p>
+        <div className={css.tab}>
+          <BookingForm/>
         </div>
       </div>
     </Tabs>

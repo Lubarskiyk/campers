@@ -1,8 +1,7 @@
-import { useEffect, } from 'react';
+import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useSearchParams } from 'react-router';
 import { CircleLoader } from 'react-spinners';
-import { getUserInfo } from '../../api/info.js';
 import CarCard from '../../components/CarCard/CarCard.jsx';
 import { fetchCampers } from '../../Redux/catalog/operations.js';
 import { getCampers, getIsLoading } from '../../Redux/catalog/selectors.js';
@@ -13,52 +12,41 @@ import filterEquipment from '../../Data/FilterEquipment.json';
 
 export default function Catalog() {
   const dispatch = useDispatch();
-
+  const [page, setPage] = useState(1);
   const isLoading = useSelector(getIsLoading);
   const data = useSelector(getCampers);
   const filter = useSelector(selectFilterCampers);
+  const perPage = 4;
 
-  // useEffect(() => {
-  //   const options = {
-  //     enableHighAccuracy: false,
-  //     timeout: 5000,
-  //     maximumAge: 0,
-  //   };
-  //
-  //   async function success(pos) {
-  //     var crd = pos.coords;
-  //     console.log('Ваше текущее местоположение:');
-  //     console.log(`Широта: ${crd.latitude}`);
-  //     console.log(`Долгота: ${crd.longitude}`);
-  //     console.log(`Плюс-минус ${crd.accuracy} метров.`);
-  //     console.log((await getUserInfo(crd)).results[0]);
-  //     console.log(crd);
-  //   }
-  //
-  //   function error(err) {
-  //     console.warn(`ERROR(${err.code}): ${err.message}`);
-  //   }
-  //
-  //   navigator.geolocation.getCurrentPosition(success, error, options);
-  // }, []);
+  const totalPage = data ? Math.ceil(data.total / perPage) : 1;
+
+  function handlerClickNext() {
+    if (page === totalPage) {
+      return;
+    }
+    setPage(page + 1);
+  }
+  function handlerClickPrev() {
+    if (page === 1) {
+      return;
+    }
+    setPage(page - 1);
+  }
 
   useEffect(() => {
-    dispatch(fetchCampers(updateSearchParams(filter)));
-  }, [dispatch, filter]);
+    dispatch(fetchCampers(updateSearchParams(filter, page)));
+  }, [dispatch, filter, page]);
 
-
-
-  function updateSearchParams(value) {
+  function updateSearchParams(value, page) {
     const updatedParams = new URLSearchParams();
-
+    updatedParams.set('page', page);
+    updatedParams.set('limit', perPage);
     const carTypeFilter = filterCarType.filter(
       cartype => cartype.id === value.carTypes
     );
-
     if (carTypeFilter.length === 1) {
       updatedParams.set('form', carTypeFilter[0].form);
     }
-
     for (const element of value.equipments) {
       const equipmentFilter = filterEquipment.filter(
         equipment => equipment.id === element
@@ -98,6 +86,17 @@ export default function Catalog() {
           })}
         </ul>
       )}
+      <div className={css.pagination}>
+        <button className={clsx(css.button, page === 1 && css.notactive)} onClick={handlerClickPrev}  >
+          Prevision Page
+        </button>
+        <button
+          className={clsx(css.button, page >= totalPage && css.notactive)}
+          onClick={handlerClickNext}
+        >
+          Next Page
+        </button>
+      </div>
     </section>
   );
 }

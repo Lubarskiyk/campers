@@ -48,10 +48,18 @@
   display: block;
   border-radius: 10px;
   padding: 40px 52px;
-  width: 50%;
   height: 588px;
   overflow-y: auto;
   background: var(--inputs);
+}
+.tabcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.tab {
+  width: calc((100% - 40px)/2);
 }
 
 .list {
@@ -93,7 +101,4 @@
   flex-direction: column;
   gap: 44px;
 }
-.tabcontainer{
-    display: flex;
 
-}

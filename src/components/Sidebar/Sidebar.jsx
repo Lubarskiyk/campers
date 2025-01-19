@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router';
 import { filterCampers } from '../../Redux/fitercampers/filterSlice.js';
 import { selectFilterCampers } from '../../Redux/fitercampers/selectors.js';
+import Footer from '../Footer/Footer.jsx';
 import Button from '../ui/Button/Button.jsx';
 import FilterCard from '../FilterCard/FilterCard.jsx';
 import css from './Sidebar.module.css';
@@ -23,7 +24,7 @@ export default function Sidebar() {
       <Formik initialValues={initialFilters} onSubmit={handlerSubmit}>
         <Form className={css.sidebar}>
           <p className={clsx(css.title, css.location)}>Location</p>
-          <Field type="text" />
+
           <p className={clsx(css.title, css.filter)}>Filters</p>
           <p className={css.filtertitle}>Vehicle equipment</p>
           <span className={css.separator}></span>
