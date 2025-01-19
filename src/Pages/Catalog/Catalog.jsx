@@ -38,7 +38,10 @@ export default function Catalog() {
   }, [dispatch, filter, page]);
 
   function updateSearchParams(value, page) {
-    console.log(value);
+    if (!value) {
+      value.carTypes='1';
+      value.equipment=[]
+    }
     const updatedParams = new URLSearchParams();
     updatedParams.set('page', page);
     updatedParams.set('limit', perPage);
