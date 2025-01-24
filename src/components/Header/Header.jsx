@@ -1,10 +1,12 @@
-import { NavLink } from 'react-router';
+import { NavLink, useLocation } from 'react-router';
 import Logo from '../ui/Logo/Logo.jsx';
 import css from './Header.module.css';
 
 export default function Header() {
+  const location = useLocation();
   const handleNavClick = () => {
-    window.location.reload();
+    if (location.pathname !== '/') {window.location.reload();}
+
   };
   return (
     <header className={css.header}>
