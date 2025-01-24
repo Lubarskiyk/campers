@@ -1,52 +1,52 @@
 .catalog {
-    height: calc(100%);
-    width: calc(100% - 424px);
-    background: var(--white);
-    margin-left: auto;
+  height: 100%;
+  width: calc(100% - 408px);
+  background: var(--white);
+  overflow-y: scroll;
+  padding-right: 16px;
 }
-.list{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin-bottom: 32px;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+
 }
 
-.loader{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.loader {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-    display: block;
-    border: 1px solid var(--gray-light);
-    padding: 16px 60px;
-    border-radius: 200px;
-    background: transparent;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: var(--main);
-    transition: background 0.3s ease;
-
+  display: block;
+  border: 1px solid var(--gray-light);
+  padding: 16px 60px;
+  border-radius: 200px;
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--main);
+  transition: background 0.3s ease;
 }
 
 .button:hover {
-    border: 1px solid var(--button-hover);
+  border: 1px solid var(--button-hover);
 }
 .notactive {
-    display: none;}
+  display: none;
+}
 
-
-
-.pagination{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }

@@ -12,7 +12,7 @@ export default function CarCard({ data }) {
   const { description, name, rating, location, price, gallery, reviews, id } =
     data;
   return (
-    <div className={css.card}>
+    <li className={css.card}>
       <div className={css.imgblock}>
         <img src={gallery[0].thumb} alt="" className={css.img} />
       </div>
@@ -45,6 +45,6 @@ export default function CarCard({ data }) {
         </ul>
         <NavLinkButton path={`/camperdetail/${id}`} component={CamperDetail} />
       </div>
-    </div>
+    </li>
   );
 }

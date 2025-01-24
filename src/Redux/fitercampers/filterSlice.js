@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   filterCampers: {
-    carTypes:"1",
-    equipments:[]
+    query: '',
   },
 };
 
@@ -12,8 +11,7 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     filterCampers: (state, action) => {
-      state.filterCampers = action.payload
-
+      state.filterCampers.query = action.payload;
     },
   },
 });

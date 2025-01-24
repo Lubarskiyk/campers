@@ -8,7 +8,7 @@ import App from './App.jsx';
 import { store,persistor } from './Redux/store.js';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter>
@@ -16,5 +16,5 @@ createRoot(document.getElementById('root')).render(
         </BrowserRouter>
       </PersistGate>
     </Provider>
-  </StrictMode>
+
 );

@@ -14,6 +14,7 @@ import favoritesReducer from './favorites/favoritesSlice.js';
 import campersReducer from './catalog/slice.js';
 import campersIdReducer from './campersdetail/slice.js';
 import filterCampersReducer from './fitercampers/filterSlice.js';
+import paginationReduser from './pagination/paginationSlice.js';
 
 const persistedFavoritesReducer = persistReducer(
   {
@@ -23,20 +24,13 @@ const persistedFavoritesReducer = persistReducer(
   favoritesReducer
 );
 
-const persistedFilterCampersReducer = persistReducer(
-  {
-    key: 'filter',
-    storage,
-  },
-  filterCampersReducer
-);
-
 export const store = configureStore({
   reducer: {
     favorites: persistedFavoritesReducer,
     campers: campersReducer,
     campersid: campersIdReducer,
-    filtercampers: persistedFilterCampersReducer,
+    filtercampers: filterCampersReducer,
+    pagination: paginationReduser,
   },
 
   middleware: getDefaultMiddleware =>

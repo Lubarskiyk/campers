@@ -5,14 +5,16 @@ export const fetchCampers = createAsyncThunk(
   'campers/fetchAll',
   async (search, thunkAPI) => {
     try {
+      const page = thunkAPI.getState().pagination.pagination.page;
+
       const { data } = await axios.get(`/campers?${search}`);
-      return data;
+
+      return {
+        data: data,
+        page: page,
+      };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
-
-
-

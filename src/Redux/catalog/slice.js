@@ -13,9 +13,10 @@ function handleRejected(state, action) {
 const slice = createSlice({
   name: 'campers',
   initialState: {
-    items: null,
+    items: [],
     isLoading: true,
     error: null,
+    totalCampers: 0,
   },
 
   extraReducers: builder => {
@@ -24,7 +25,13 @@ const slice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.totalCampers = action.payload.data.total;
+
+        if (action.payload.page === 1) {
+          state.items = action.payload.data.items;
+        } else {
+          state.items.push(...action.payload.data.items);
+        }
       })
       .addCase(fetchCampers.rejected, handleRejected);
   },

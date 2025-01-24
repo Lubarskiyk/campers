@@ -6,7 +6,7 @@ export default function Price({ price, className }) {
         currency: 'EUR',
       })
         .format(price)
-        .replace(/,/g, ' ')}
+        .replace(/,/g, '')}
     </p>
   );
 }

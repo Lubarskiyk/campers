@@ -1,0 +1,11 @@
+.section {
+  flex: 1 1 auto;
+  max-width: 1440px;
+  width: 100%;
+  margin: 73px auto 0;
+  display: flex;
+
+  padding: 48px 64px;
+  overflow: hidden;
+  gap: 24px;
+}

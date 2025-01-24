@@ -1,19 +1,8 @@
-.wraper {
-  height: calc(100vh - 73px);
-  padding: 48px 64px;
-  position: relative;
-  top: 73px;
-}
-
 .sidebar {
   height: calc(100vh - 73px);
-  width: 360px ;
+  width: 360px;
   color: var(--main);
-  position: fixed;
-  top: 136px;
-}
-.main {
-
+  overflow: hidden;
 }
 
 .title {

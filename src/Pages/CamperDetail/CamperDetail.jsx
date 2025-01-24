@@ -15,7 +15,6 @@ import css from './CamperDetail.module.css';
 export default function CamperDetail() {
   const data = useSelector(getCampersId);
   const isLoading = useSelector(getIsLoadingId);
-
   const dispatch = useDispatch();
   const param = useParams();
 
