@@ -1,9 +1,8 @@
 .camperdetail {
-  height: calc(100vh - 73px);
+  flex: 1 1 auto;
+  max-width: 1440px;
+  margin: 73px auto 0;
   padding: 48px 64px;
-  position: relative;
-  top: 73px;
-  width: 100%;
   background: var(--white);
   font-weight: 600;
   font-size: 24px;
@@ -21,10 +20,12 @@
   margin-bottom: 28px;
 }
 
-.description{
+.description {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: var(--text);
   margin-bottom: 60px;
 }
+
+

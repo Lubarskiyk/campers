@@ -5,7 +5,7 @@ import css from './Header.module.css';
 export default function Header() {
   const location = useLocation();
   const handleNavClick = () => {
-    if (location.pathname !== '/') {window.location.reload();}
+    if (location.pathname === '/catalog') {window.location.reload();}
 
   };
   return (
@@ -21,7 +21,6 @@ export default function Header() {
           >
             Home
           </NavLink>
-
           <NavLink
             to={'/catalog'}
             className={({ isActive }) => (isActive ? css.active : '')}

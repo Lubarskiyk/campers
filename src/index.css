@@ -101,4 +101,5 @@ button:active {
   --badges:#EAEBED;
   --inputs:#F7F7F7;
   --white: #ffffff;
+  --errorshadow: rgba(228, 72, 72, 0.3);
 }
